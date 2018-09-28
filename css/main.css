@@ -1,0 +1,107 @@
+body {
+    background-color: darkgrey;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.wrapper {
+    background-color: burlywood;
+    min-width: 475px;
+    max-height: 473.636px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.strokeTable {
+    background-color: beige;
+    min-width: 140px;
+    max-height: 473.636px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+p {
+    margin: 0 0 0 0;
+    font-size: 0.9em;
+}
+
+hr {
+    margin: 5px;
+}
+
+textarea {
+	border: none;
+	background-color: beige;
+	width: 135px;
+	margin: 0;
+	padding: 0 5px;
+	resize: vertical;
+	min-height: 425px;
+	max-height: 425px;
+	font:12px Verdana, sans-serif;
+}
+
+.cell {
+
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    text-align: center;
+    
+}
+
+.textDown {
+    transform: rotate(180deg);
+
+}
+
+table {
+    border-collapse:collapse;
+    border: 3px solid black;
+}
+
+
+.black {
+    background-color: brown;
+}
+
+.white {
+/*    background-color: floralwhite;*/
+    background-color: burlywood;
+}
+
+.border {
+    height: 20px;
+    width: 20px;
+    border: none;
+}
+
+.blackChess {
+    color: black;
+    font-weight: 600;
+}
+
+.whiteChess {
+    color: white;
+    font-weight: 600;
+}
+
+img {
+    margin-top: 1px;
+}
+
+.highlight {
+ 
+    background-color: dimgray;
+}
