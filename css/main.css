@@ -1,56 +1,28 @@
+
 body {
     background-color: darkgrey;
+    background-image: url(../img/background.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-content: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    min-width: 690px;
 }
 
 .wrapper {
     background-color: burlywood;
-    min-width: 475px;
-    max-height: 473.636px;
+    height: 469px;
+    min-width: 469px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
-}
-
-.strokeTable {
-    background-color: beige;
-    min-width: 140px;
-    max-height: 473.636px;
+    box-shadow: 0 0 5px 5px;
     margin-left: 40px;
-    margin-right: 40px;
-    border-radius: 20px;
-    text-align: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-p {
-    margin: 0 0 0 0;
-    font-size: 0.9em;
-}
-
-hr {
-    margin: 5px;
-}
-
-textarea {
-	border: none;
-	background-color: beige;
-	width: 135px;
-	margin: 0;
-	padding: 0 5px;
-	resize: vertical;
-	min-height: 425px;
-	max-height: 425px;
-	font:12px Verdana, sans-serif;
-}
-
-.cell {
-
+    
 }
 
 td {
@@ -68,7 +40,7 @@ td {
 
 table {
     border-collapse:collapse;
-    border: 3px solid black;
+    /*border: 3px solid black;*/
 }
 
 
@@ -87,21 +59,66 @@ table {
     border: none;
 }
 
-.blackChess {
-    color: black;
-    font-weight: 600;
-}
-
-.whiteChess {
-    color: white;
-    font-weight: 600;
-}
-
 img {
     margin-top: 1px;
 }
 
 .highlight {
- 
     background-color: dimgray;
+}
+
+.strokeTable {
+    background-color: burlywood;
+    min-width: 160px;
+    max-height: 468.636px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 5px;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font : 14px Verdana, sans-serif;
+    box-shadow: 0 0 5px 3px;
+}
+
+p {
+    margin: 0 0 0 0;
+    font-size: 0.9em;
+    color: #4A4A4A;
+    font-weight: 600;
+}
+
+hr {
+    margin: 5px;
+    border: 0.5px #4A4A4A;
+    border-style: ridge;
+}
+
+textarea {
+	border: none;
+	background-color: burlywood;
+	width: 140px;
+	margin: 0;
+	padding: 0 5px;
+	resize: vertical;
+	min-height: 425px;
+	max-height: 425px;
+	font:12px Verdana, sans-serif;
+    font-style: oblique;
+    font-family: monospace;
+}
+
+
+.shelf {
+
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+    font-style: oblique;
+    position: fixed;
 }
