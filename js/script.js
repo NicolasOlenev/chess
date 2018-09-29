@@ -62,17 +62,17 @@ for (i = 11; i < 89; i++) {
     if (i < 50)
         color = 'Black';
     if (i == 11 || i == 18 || i == 81 || i == 88)
-        img.src = ('../img/rook' + color + '.png'); // ладья
+        img.src = ('img/figures/rook' + color + '.png'); // ладья
     if (i == 12 || i == 17 || i == 82 || i == 87)
-        img.src = ('../img/kNight' + color + '.png'); // конь
+        img.src = ('img/figures/kNight' + color + '.png'); // конь
     if (i == 13 || i == 16 || i == 83 || i == 86)
-        img.src = ('../img/bishop' + color + '.png'); // слон
+        img.src = ('img/figures/bishop' + color + '.png'); // слон
     if (i == 14 || i == 84)
-        img.src = ('../img/queen' + color + '.png'); // ферзь
+        img.src = ('img/figures/queen' + color + '.png'); // ферзь
     if (i == 15 || i == 85)
-        img.src = ('../img/king' + color + '.png'); // король
+        img.src = ('img/figures/king' + color + '.png'); // король
     if (i > 20 && i < 29 || i > 70 && i < 79) {
-        img.src = ('../img/pawn' + color + '.png'); // пешка
+        img.src = ('img/figures/pawn' + color + '.png'); // пешка
         img.height = ('35');
     }
     if (playground[i].classList[1] != 'border' && (i < 29 || i > 70))
@@ -98,12 +98,13 @@ function highlight(node) {      // Функция для подсветки кл
     selectedTd = node;
     selectedTd.classList.add('highlight');
 }   // Функция для подсветки клетки под выбранной фигурой и клетки, на которую фигуру переместили
-var stroke = 1; // Счетчик, определяющий ход игрока (нечетный - белые; четный - черные)
-var player = ['белых', 'черных'];
-var playerReverse = ['черных', 'белых'];
-var strokePlayerReverse;
-var strokePlayer
-var strokeWay;
+var stroke = 1, // Счетчик, определяющий ход игрока (нечетный - белые; четный - черные)
+    player = ['белых', 'черных'],
+    playerReverse = ['черных', 'белых'],
+    strokePlayerReverse,
+    strokePlayer,
+    strokeWay,
+    space;
 //console.log('Ход белых:');
 table.onclick = function(event) {   // Функция обработчика событий "onclick", передвигает фигурки
     var target = event.target;
@@ -134,14 +135,17 @@ table.onclick = function(event) {   // Функция обработчика с�
                 //console.log('В руке фигурры нет');
                 strokeWay += ('-' + target.classList[0]);
                 //console.log('Ход ' + strokePlayerReverse + ': ' + strokeWay);
-                document.querySelector('textarea').innerHTML += 'Ход ' + strokePlayerReverse + ': ' + strokeWay + '\u000A';
+                if (strokePlayerReverse == 'черных')
+                    space = ': ';
+                else space = ':  ';
+                document.querySelector('textarea').innerHTML += 'Ход ' + strokePlayerReverse + space + strokeWay + '\u000A';
             }
             if (inHand != null && gamerIs(target.firstChild.getAttribute('src')) != gamerIs(inHand.getAttribute('src'))) {
                 target.innerHTML = '';
                 target.appendChild(inHand);
                 strokeWay += ('-' + target.classList[0]);
                 //console.log('Ход ' + strokePlayerReverse + ': ' + strokeWay);
-                document.querySelector('textarea').innerHTML += 'Ход ' + strokePlayerReverse + ': ' + strokeWay + '\u000A';
+                document.querySelector('textarea').innerHTML += 'Ход ' + strokePlayerReverse + space + strokeWay + '\u000A';
                 //console.log('фигура съела фигуру соперника');
                 highlight(target);
                 inHand = null;
